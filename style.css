@@ -1,0 +1,130 @@
+@import url('https://fonts.cdnfonts.com/css/crimson-pro');
+@import url('https://fonts.cdnfonts.com/css/europa-title');
+@import url('https://fonts.cdnfonts.com/css/g-gerhana-matahari');
+@import url('https://fonts.cdnfonts.com/css/classica-2');
+@import url('https://fonts.cdnfonts.com/css/ubuntu-mono-2');
+@import url('https://fonts.cdnfonts.com/css/fixedsys-62');
+@import url('https://fonts.cdnfonts.com/css/modestic-sans');
+@import url('https://fonts.cdnfonts.com/css/borna');
+@import url('https://fonts.cdnfonts.com/css/warm-stories');
+@import url('https://fonts.cdnfonts.com/css/geologica');
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
+
+.form, #turndisplay{
+    font-family: 'Borna', sans-serif;
+}
+
+#gametypeopt{
+    font-family: 'SF Mono', sans-serif;
+}
+
+:root {
+    --v1: #4c3b3f;
+    --v2: #392c2f;
+    --v3: #261d1f;
+    --v4: #130f10;
+    --v5: #C4F1BE;
+}
+
+html {
+    background-color: var(--v2);
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 20rem;
+    transition: opacity 200ms;
+}
+
+.form>span {
+    font-size: 1.4rem;
+}
+
+#gametypeopt{
+    width: 9rem;
+    padding: .3rem 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--v3);
+    color: white;
+    transition: background-color 100ms;
+}
+
+#gametypeopt:hover{
+    background-color: var(--v4);
+    transition: background-color 100ms;
+}
+
+.game{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 50vw;
+    border-radius: .6rem;
+    background-color: var(--v3);
+    transition: opacity 200ms;
+    opacity: 0;
+    box-shadow: var(--v4) .3rem .3rem;
+}
+
+.game .board{
+    display: grid;
+    height: 95%;
+    width: 95%;
+    border-radius: .6rem;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: .8rem;
+}
+
+.board .square{
+    background-color: var(--v4);
+    border-radius: .3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checker{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.black{
+    background-color: black;
+}
+
+.white{
+    background-color: white;
+}
+
+#turndisplay{
+    position: absolute;
+    left: 5rem;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.possibleOption{
+    background-color: var(--v5) !important;
+}
